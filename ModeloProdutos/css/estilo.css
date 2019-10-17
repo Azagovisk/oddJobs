@@ -1,0 +1,147 @@
+
+
+form label,input,button {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#036;
+    font-weight:bold;
+    float:left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 12px 20px;
+}
+
+th, td {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color: #4CAF50;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:24px;
+    color: #4CAF50;
+    text-align: center;
+}
+fieldset {
+    border: 0;
+}
+
+label {
+    margin-bottom: 0.2em;
+    color: #000;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+input:focus {
+    background: #F8F8FF;
+}
+
+#cadastro{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#listagem{
+    padding: 20px;
+}
+#pesquisar{
+    padding: 20px;
+}
+.botao {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+ 
+.botao:hover {
+    background-color: #006400;
+}
+ 
+
+.erro{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: #FF0000;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+}
+
+.sucesso{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: #10CD23;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+}
+
+.aviso{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background: #D4C713;
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+
+    
+}
+
+#pesquisafsm-caixa {
+
+    width:90%;
+}
+#pesquisafsm-botao {
+    
+    border: 1px solid #222;
+    color: #eee; 
+    background: #4CAF50;
+    margin-left: -3px;
+    margin-top: 8px;
+    color:#fff;
+    padding:6px 15px 20px 22px;
+    border:0 none;
+    font-weight:bold;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+#pesquisafsm-botao:hover {
+    cursor: pointer;
+    background:  #006400;
+}

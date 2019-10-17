@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Sistema</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript">
+            function validaDados() {
+
+                var nome = document.getElementById('nome');
+                var identificador = document.getElementById('identificador');
+                var senha = document.getElementById('senha');
+                var email = document.getElementById('email');
+                var endereco = document.getElementById('endereco');
+                var datanascimento = document.getElementById('datanascimento');
+                var ativo = document.getElementById('ativo');
+                var inativo = document.getElementById('inativo');
+                //var atividade = document.getElementById('atividade');
+                    
+                //Nome
+                if(nome.value==""){
+                    alert("Insira seu nome!");
+                    nome.focus();
+                    return false;
+                }
+                if(nome.value.length<4){
+                    alert("Seu nome deve conter mais que 4 digitos!");
+                    nome.focus();
+                    return false;
+                }
+                
+                //ID
+                if(identificador.value==""){
+                    alert("Insira seu ID!");
+                    identificador.focus();
+                    return false;
+                }
+                
+                
+                //Senha
+                if(senha.value.lenght<4){
+                    alert("Sua senha deve conter mais que 4 caracteres!");
+                    senha.focus();
+                    return false;
+                }
+                if(senha.value==""){
+                    alert("Insira uma senha!");
+                    senha.focus();
+                    return false;
+                }      
+                
+                //E-mail
+                if(email.value==""){
+                    alert("Insira seu email!");
+                    email.focus();
+                    return false;
+                }
+               
+               
+                //Endereço
+                if(endereco.value==""){
+                    alert("Insira seu endereço!");
+                    endereco.focus();
+                    return false;
+                }
+                
+                //Data de Nascimento
+                if(datanascimento.value==""){
+                    alert("Insira sua data de nascimento!");
+                    datanascimento.focus();
+                    return false;
+                }
+
+               
+                /*
+
+                if(ativo.value!=true && ativo.value!=false&& inativo.value!=true && inativo.value!=false){
+                    alert("Insira sua atividade!");
+                    
+                    return false;
+                }
+
+*/
+                
+                //Atividade
+                //if(atividade.value==""){
+                //    alert("Informe atividade!");
+                //    atividade.focus();
+                //    return false;
+                //}
+                return true;
+            } 
+            
+        </script>    
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="elements.html">Cliente</a>
+						<a href="elements3.php">Empréstimos</a>
+						<a href="elements2.html">Acervo Bibliográfico</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Cliente</h2>
+						<p>Cadastro de Cliente</p>
+					</header>
+					<hr class="major" />
+									<form id="formulario" method="POST" action="elements1.php">
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="nome" id="nome" placeholder="Nome" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="identificador" id="identificador" placeholder="ID" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="password" name="senha" id="senha" placeholder="Senha" />
+											</div>
+											<div class="6u$ 12u$(xsmall)">
+												<input type="email" name="email" id="email" placeholder="Email" />
+											</div>
+											<div class="6u$ 12u$(xsmall)">
+												<input type="text" name="endereco" id="endereco" placeholder="Endereço" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<label for="datanascimento">Data de Nascimento</label>
+												<input type="date" name="datanascimento" id="datanascimento"/>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+											</div>
+											<!-- Break -->
+											<div class="4u 12u$(small)">
+												<input type="radio" id="ativo" name="atividade" value="ativo">
+												<label for="ativo">Ativo</label>
+											</div>
+											<div class="4u 12u$(small)">
+												<input type="radio" id="inativo" name="atividade" value="inativo">
+												<label for="inativo">Inativo</label>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Enviar" name="enviar" id="enviar" onclick="return validaDados();"/></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+					<hr/>
+				</div>
+			</section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

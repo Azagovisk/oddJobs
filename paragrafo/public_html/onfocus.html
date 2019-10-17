@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .azul{
+                background-color: blue;
+            }
+            .vermelho{
+                background-color: red;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                
+                
+            }
+            
+            function teste(e){
+                alert(e.value);
+            }
+               
+                function mostra(elemento){
+                   alert(elemento.value);
+                   document.getElementById('texto').focus();
+                  
+                }
+                //ONFOCUS-> Quando foca no elemento
+                //ONBLUR -> Quando perde o foco do elemento
+                //ONCHANGE -> 
+            
+            
+        </script>
+    </head>
+    <body>
+        <input onblur="mostra(this)" type="text" id="texto1" value="Valor Inicial"/>
+         <input onfocus="mostra(this)" type="text" id="texto2" value="Valor Inicial 2"/>
+        <input type="text" id="texto"/>
+        <select onchange="teste(this)">
+            <option value="RS">RS</option>
+            <option value="SP">SP</option>
+        </select>
+    </body>
+</html>

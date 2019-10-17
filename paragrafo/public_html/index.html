@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .azul{
+                background-color: blue;
+            }
+            .vermelho{
+                background-color: red;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                let p1 = document.getElementById("p1");
+                let cidade=document.getElementById("cidade");
+                let vetor = document.getElementsByTagName("p");
+                let azul = document.getElementsByClassName("azul");
+                console.log(p1);  
+                console.log(vetor.length);
+                console.log(vetor);
+                console.log(azul.length);
+                console.log(azul);
+                alert ("Um momento Amigo!");
+                //TROCA O VALOR DE P1
+                p1.innerHTML="Mudado";
+                alert ("Um momento Amigo!");
+                //TROCA ATRIBUTO DO INPUT
+                cidade.setAttribute('value', 'Marcorama');
+                let body = p1.parentElement;
+                alert ("Um momento Amigo!");
+                //REMOVE P1
+                body.removeChild(p1);
+                let pn = document.createElement('p');
+                pn.innerHTML  = "Quarto";
+                alert ("Adicionar!");
+                body.appendChild(pn);
+                //ADICIONA TÍTULOB PRA PÁGINA HTML
+                document .title="Página";
+                let p2 = document.getElementById('p2');
+                alert ("MILIVINTI MUDA COR");
+                p2.style.backgroundColor="red";
+                p2.style.display='none';
+                
+                //Inicia valor do bootão
+                let botao = document.getElementById('botao');
+                botao.style.backgroundColor='green';
+                
+                
+                //Mesma função do onclick no input do HTML, isola JS do HTML
+                botao.addEventListener("click", teste);
+                
+            }
+            
+            function esconderParagrafo(){
+                /*
+                let p3 = document.getElementById('p3');
+                if(p3.style.display == 'none'){
+                    p3.style.display='block';
+                }else{
+                    
+                p3.style.display='none';
+                */
+               let p3 = document.getElementById('p3');
+               let cor = document.getElementById('cor');
+               p3.style.backgroundColor = cor.value;
+                }
+                
+                /*
+                function teste(elemento){
+                    alert ("Clicou no botão bixo");
+                    //let botao = document.getElementById('botao');
+                    //botao.style.backgroundColor='#0000FF';
+                    elemento.style.backgroundColor='#0000FF';
+                }
+                */
+               
+                function teste(){
+                    alert ("Clicou no botão bixo");
+                    let botao = document.getElementById('botao');
+                    botao.style.backgroundColor='#0000FF';
+                    
+                }
+                
+            
+            
+        </script>
+    </head>
+    <body>
+        <p class="azul" id="p1">Primeiro</p>
+        <p class="azul" id="p2">Segundo</p>
+        <p class="vermelho" id="p3">Terceiro</p>
+        <input type="color" id="cor"/>
+        <input type="button" id="botao" value="CliqueP/Mudar"/>
+        <button onclick="esconderParagrafo()">Clique aqui</button>
+        cidade: <input id="cidade" type="text" value="Bento Gonçalves"/>
+    </body>
+</html>

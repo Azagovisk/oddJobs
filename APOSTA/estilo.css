@@ -1,0 +1,117 @@
+h3{
+    text-align: center;
+    font-family: verdana;
+        font-size: medium;
+        vertical-align: middle;
+}
+
+
+
+nav {
+  text-align: center;
+  background: white;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+ .button{
+         padding:5px 15px 5px 15px;
+        text-decoration: none;
+        display: inline-block;
+     -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+         -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        outline:none;
+         position:relative;
+         margin:10px;
+         padding:5px 20px;
+         background:transparent url(buttonover.png) repeat-x top left;
+        white-space:nowrap;
+        border-radius:16px;
+        font-family: verdana;
+        font-size: medium;
+        vertical-align: middle;
+}
+
+.button:hover{
+background-color: #777;
+ }
+
+ .button:active{
+top: 1px;
+left:1px;
+}
+
+.shadow{
+ background-color: #a3a3a3;
+ border: 2px solid #777;
+ color: #FFF;
+ text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+}
+
+#divCenter { 
+background-color: #e1e1e1; 
+width: 380px; 
+height: 270px; 
+left: 50%; 
+margin: -130px 0 0 -210px; 
+padding:10px;
+position: absolute; 
+top: 50%; 
+font-family: verdana;
+font-size: medium;
+vertical-align: middle;
+
+}
+
+#divCad{
+background-color: #e1e1e1; 
+width: 380px; 
+height: 430px; 
+left: 50%; 
+margin: -130px 0 0 -210px; 
+padding:10px;
+position: absolute; 
+top: 50%; 
+font-family: verdana;
+font-size: medium;
+vertical-align: middle;
+}
+
+.divContent{
+    text-align: center;
+    font-family: verdana;
+        font-size: medium;
+        vertical-align: middle;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 9px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: verdana;
+
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 9px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+.header{
+text-align: right;
+margin: 10px 0;
+padding: 10px;
+font-family: verdana;
+}
+
+.imagem{
+    border: 2px solid gray;
+    border-radius: 4px;
+}

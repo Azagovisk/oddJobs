@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Sistema</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<script type="text/javascript">
+            function inicializa(){
+                
+                var optLivro = document.getElementById('optLivro');
+                var optRevista = document.getElementById('optRevista');
+                                
+                optLivro.style.display = 'none';
+                optRevista.style.display = 'none';
+            }
+            	function validaDados() {
+                
+                var codigo = document.getElementById('cod');
+                var assunto = document.getElementById('ass');
+                var titulo = document.getElementById('tit');
+                var editora = document.getElementById('ed');
+                var ano = document.getElementById('ano');
+                if(codigo.value==""){
+                    alert("Por favor, insira o Código");
+                    codigo.focus();
+                    return false;
+                }
+                if(assunto.value==""){
+                    alert("Por favor, insira o Assunto");
+                    assunto.focus();
+                    return false;
+                }
+                if(titulo.value==""){
+                    alert("Por favor, insira o Título");
+                    titulo.focus();
+                    return false;
+                }
+                if(editora.value==""){
+                    alert("Por favor, insira a Editora");
+                    editora.focus();
+                    return false;
+                }
+                if(ano.value==""){
+                    alert("Por favor, insira o Ano");
+                    ano.focus();
+                    return false;
+                }
+                return true;
+            }
+            
+            function mudaTipo(tipo) {
+                
+                var optLivro = document.getElementById('optLivro');
+                var optRevista = document.getElementById('optRevista');
+                    
+                if(tipo=="Livro"){
+                    optLivro.style.display = 'block';
+                    optRevista.style.display = 'none';                   
+                }else if(tipo=="Revista"){
+                    optLivro.style.display = 'none';
+                    optRevista.style.display = 'block';                   
+                }else if(tipo=="Selecione..."){
+                    optLivro.style.display = 'none';
+                    optRevista.style.display = 'none';
+                      
+                }
+            }
+            
+        </script>
+
+	</head>
+	<body class="subpage" onload="inicializa()">
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="elements.html">Cliente</a>
+						<a href="elements3.php">Empréstimos</a>
+						<a href="elements2.html">Acervo Bibliográfico</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Acervo Bibliográfico</h2>
+						<p>Publicação</p>
+					</header>
+					<hr class="major" />
+									<form method="POST" action="elements2.php">
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="codigo" id="cod" placeholder="Código" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="assunto" id="ass" placeholder="Assunto" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="titulo" id="tit" placeholder="Título" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="editora" id="ed" placeholder="Editora" />
+											</div>
+											<div class="6u$ 12u$(xsmall)">
+												<input type="text" name="ano" id="ano" placeholder="Ano" />
+											</div>
+											<div class="select-wrapper">
+													<select name="tipo" onchange="mudaTipo(this.value);">
+														<option name="selec" id="selec">Selecione...</option>
+														<option name="livro" id="livro">Livro</option>
+														<option name="revista" id="revista">Revista</option>
+													</select>
+												</div>
+									    	<div id="optLivro">
+									    		 <label for="edicao">Edição:</label>
+									    	<input type="text" name="edicao" id="edicao"></input> <br/>
+									
+									  	 	 <label for="isbn">ISBN:</label>
+									    			<input type="text" name="isbn" id="isbn"></input> <br/>
+									  	 	 <label for="autor">Autor:</label>
+									    	<input type="text" name="autor" id="autor"></input> <br/>
+									    	</div>
+									
+									    	<div id="optRevista">
+									    		<label for="colecao">Coleção:</label>
+									    			<input type="text" name="colecao" id="colecao"></input> <br/>
+									    		<h3>Adicionar artigos:</h3>
+									    		<label for="artigo1">Artigo 1:</label>
+									    			<input type="text" name="artigo1" id="ar1"></input> <br/><br/>
+									
+									    		<label for="artigo2">Artigo 2:</label>
+									    			<input type="text" name="artigo2" id="ar2"></input> <br/><br/>
+									
+									    		<label for="artigo3">Artigo 3:</label>
+									    			<input type="text" name="artigo3" id="ar3"></input> <br/><br/>
+									
+									    		<label for="artigo4">Artigo 4:</label>
+									    			<input type="text" name="artigo4" id="ar4"></input> <br/><br/>
+									
+									    		<label for="artigo5">Artigo 5:</label>
+    											<input type="text" name="artigo5" id="ar5"></input> <br/><br/>
+    										</div>
+    										<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Enviar" name="enviar" id="enviar" onclick="return validaDados();"/></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+					<hr />
+				</div>
+			</section>
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

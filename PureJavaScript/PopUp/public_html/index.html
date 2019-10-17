@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css.css">
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var i = 15;
+                 var inter;
+                setTimeout(function(){
+                    $('.popup').show();
+                   inter = setInterval(function(){ i--; $('#count').html(i);}, 1000);
+                },2000);
+                setTimeout(function(){
+                    clearInterval(inter);
+                    $('#count').html("");
+                    $('.fechar').show();
+                },17000);
+                $('.fechar').click(function(){
+                    $(this).parent().hide()
+                })
+                
+            })
+            
+        </script>
+    </head>
+    <body>
+        
+        <table border="1px" class="table">
+            <div class="popup">     
+                <h3 class="texto" align="center">PROPAGANDA</h3>
+                <h5 id="count">15</h5>
+                <img src="x.png" class="fechar"/>
+            </div>
+            <thead>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </thead>
+            <tbody>
+                <tr>
+            <td>Line1</td>
+            <td>Line1</td>
+            <td>Line1</td>
+                </tr>
+                <tr>
+            <td>Line2</td>
+            <td>Line2</td>
+            <td>Line2</td>
+                </tr>
+                <tr>
+            <td>Line3</td>
+            <td>Line3</td>
+            <td>Line3</td>
+                </tr>
+                <tr>
+            <td>Line4</td>
+            <td>Line4</td>
+            <td>Line4</td>
+                </tr>
+                <tr>
+            <td>Line5</td>
+            <td>Line5</td>
+            <td>Line5</td>
+                </tr>
+                <tr>
+            <td>Line6</td>
+            <td>Line6</td>
+            <td>Line6</td>
+                </tr>
+             <tr>
+            <td>Line7</td>
+            <td>Line7</td>
+            <td>Line7</td>
+                </tr>
+             <tr>
+            <td>Line8</td>
+            <td>Line8</td>
+            <td>Line8</td>
+                </tr>
+                 <tr>
+            <td>Line9</td>
+            <td>Line9</td>
+            <td>Line9</td>
+                </tr>
+                 <tr>
+            <td>Line10</td>
+            <td>Line10</td>
+            <td>Line10</td>
+                </tr>
+                 <tr>
+            <td>Line11</td>
+            <td>Line11</td>
+            <td>Line11</td>
+                </tr>
+                 <tr>
+            <td>Line12</td>
+            <td>Line12</td>
+            <td>Line12</td>
+                </tr>
+                 <tr>
+            <td>Line13</td>
+            <td>Line13</td>
+            <td>Line13</td>
+                </tr>
+                 <tr>
+            <td>Line14</td>
+            <td>Line14</td>
+            <td>Line14</td>
+                </tr>
+                 <tr>
+            <td>Line15</td>
+            <td>Line15</td>
+            <td>Line15</td>
+                </tr>
+                 <tr>
+            <td>Line16</td>
+            <td>Line16</td>
+            <td>Line16</td>
+                </tr>
+                 <tr>
+            <td>Line17</td>
+            <td>Line17</td>
+            <td>Line17</td>
+                </tr>
+                 <tr>
+            <td>Line18</td>
+            <td>Line18</td>
+            <td>Line18</td>
+                </tr>
+                 <tr>
+            <td>Line19</td>
+            <td>Line19</td>
+            <td>Line19</td>
+                </tr>
+                 <tr>
+            <td>Line20</td>
+            <td>Line20</td>
+            <td>Line20</td>
+                </tr>
+               
+            
+            </tbody>
+        </table>
+    </body>
+</html>

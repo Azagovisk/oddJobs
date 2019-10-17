@@ -1,0 +1,39 @@
+.popup{
+    z-index: 2;
+    position: absolute;
+    background-color:black; 
+    height:300px;
+    width: 300px;
+    top:0px;
+    margin-left: 50%;
+    left: -150px;
+    display: none;
+}
+.fechar{
+    position: absolute;
+    right:5px;
+    top:5px;
+    height: 30px;
+    width: 30px;
+    display: none;
+    cursor:pointer;
+}
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+}
+.texto{
+    color: white;
+     position: absolute;
+    height:100px;
+    width: 100px;
+}
+#count{
+    color: white;
+    position: absolute;
+    right:5px;
+    top:5px;
+    height: 30px;
+    width: 30px;
+}

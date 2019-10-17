@@ -1,0 +1,4 @@
+<?php
+
+//EDITAR INFORMAÇÕES DO USUARIO E/OU  ADM
+?>

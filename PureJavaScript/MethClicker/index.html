@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Meth Clicker</title>   
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script>
+          //  $(function(){
+          //     alert($('p').html());   //MESMA COISA QUE O .READY EMBAIXO
+          //  });
+          //document.getElementById -> $("#teste");
+          //document.getElementsByClassName -> $("p.teste");
+          //document.getElementsByTagName -> $("div");
+          //$("#teste").html(); -> retorna o html do elemento de id 'teste'
+          //$("#nome").val(); -> pega valor que digitou no elemento.
+          //$("[name='nome']") -> Pega um elemento a partir de quakquer atributo (no caso nome, mas pode ser id, class, etc.)
+          //$("#nome").css('propriedade') -> Pega elemento com propriedade css
+          //$("[name='texto']").attr('value') -> retona o valor do value no HTML.
+          //Pode-se alterar pelas mesma sintaxe. EX: $("#nome").val(3); -> altera para valor 3;
+          //Recupera E altera-> EX: $("#nome").css('propriedade', 'Nova'); retorna o objeto com nova propriedade
+            $(document).ready(function(){
+            	//VARIAVEIS
+            	//Saldo
+                var i = 0;
+
+                //Clicker
+                var cc = 0;
+                var cimg = "<img src='cursor.gif'height='30' width='30'>";
+                var cprice = 30;
+
+                //Slave Producer
+                var sc = 0;
+                var simg = "<img src='slave.gif'height='50' width='50'>";
+                var sprice = 100;
+
+                //RV
+                var rvc=0;
+                var rvimg = "<img src='rv.gif'height='50' width='80'>";
+                var rvprice = 1000;
+
+                //Dealers
+                var dc=0;
+                var dimg = "<img src='dealers.gif'height='50' width='50'>";
+                var dprice = 2000;
+
+                //Partnership
+                var pc=0;
+                var pimg = "<img src='partner.gif'height='50' width='50'>";
+                var pprice = 10000;
+
+                //MethLab
+                var mlc=0;
+                var mlimg = "<img src='methlab.gif'height='60' width='70'>";
+                var mlprice = 30000;
+
+                //Gus Fring
+                var gusc=0;
+                var gusimg = "<img src='gus.png'height='60' width='70'>";
+                var gusprice = 50000;
+
+                //Los Pollos Hermanos
+                var polc=0;
+                var polimg = "<img src='pollos.png'height='60' width='70'>";
+                var polprice = 100000;
+
+                //Jesse Pinkman
+                var jc=0;
+                var jimg = "<img src='jesse.gif'height='70' width='80'>";
+                var jprice = 1000000;
+
+                //Heisenberg
+                var hc=0;
+                var himg = "<img src='heisenberg2.gif'height='75' width='85'>";
+                var hprice = 10000000;
+
+                //FUNÇÕES
+                //Grande Meth
+                $('#meth').click(function(){	
+                    i++;
+                    $('#ex').html(i);
+                })
+                //Clicker
+                 $('#clicker').click(function(){
+                     if(i>=cprice){
+                         i = i-cprice;
+                    var x = setInterval(function(){ i++; $('#ex').html(i); }, 1000);
+                    cc++;
+                    cprice = cprice*2;
+                    $('#clickerC').html(cc);
+                    $('#cursor').html(cimg);
+                    $('#cprice').html(cprice);
+                     }
+                })
+                //Slave
+                $('#slave').click(function(){
+                     if(i>=sprice){
+                         i = i-sprice;
+                    var x = setInterval(function(){ i=i+5; $('#ex').html(i); }, 1000);
+                    sc++;
+                    sprice = sprice*2;
+                    $('#slaveC').html(sc);
+                    $('#slaveimg').html(simg);
+                    $('#sprice').html(sprice);
+                     }
+                })
+                //RV
+                $('#rv').click(function(){
+                     if(i>=rvprice){
+                         i = i-rvprice;
+                    var x = setInterval(function(){ i=i+20; $('#ex').html(i); }, 1000);
+                    rvc++;
+                    rvprice = rvprice*2;
+                    $('#rvC').html(rvc);
+                    $('#rvimg').html(rvimg);
+                    $('#rvprice').html(rvprice);
+                     }
+                })
+
+                //Dealers
+                $('#d').click(function(){
+                     if(i>=dprice){
+                         i = i-dprice;
+                    var x = setInterval(function(){ i=i+40; $('#ex').html(i); }, 1000);
+                    dc++;
+                    dprice = dprice*2;
+                    $('#dC').html(dc);
+                    $('#dimg').html(dimg);
+                    $('#dprice').html(dprice);
+                     }
+                })
+
+                //Partnership
+                $('#p').click(function(){
+                     if(i>=pprice){
+                         i = i-pprice;
+                    var x = setInterval(function(){ i=i+60; $('#ex').html(i); }, 1000);
+                    pc++;
+                    pprice = pprice*2;
+                    $('#pC').html(pc);
+                    $('#pimg').html(pimg);
+                    $('#pprice').html(pprice);
+                     }
+                })
+
+                //Meth Lab
+                $('#ml').click(function(){
+                     if(i>=mlprice){
+                         i = i-mlprice;
+                    var x = setInterval(function(){ i=i+90; $('#ex').html(i); }, 1000);
+                    mlc++;
+                    mlprice = mlprice*2;
+                    $('#mlC').html(mlc);
+                    $('#mlimg').html(mlimg);
+                    $('#mlprice').html(mlprice);
+                     }
+                })
+
+                //Gus Fring
+                $('#gus').click(function(){
+                     if(i>=gusprice){
+                         i = i-gusprice;
+                    var x = setInterval(function(){ i=i+110; $('#ex').html(i); }, 1000);
+                    gusc++;
+                    gusprice = gusprice*2;
+                    $('#gusC').html(gusc);
+                    $('#gusimg').html(gusimg);
+                    $('#gusprice').html(gusprice);
+                     }
+                })
+
+                //Los Pollos Hermanos
+                $('#pol').click(function(){
+                     if(i>=polprice){
+                         i = i-polprice;
+                    var x = setInterval(function(){ i=i+130; $('#ex').html(i); }, 1000);
+                    polc++;
+                    polprice = polprice*2;
+                    $('#polC').html(polc);
+                    $('#polimg').html(polimg);
+                    $('#polprice').html(polprice);
+                     }
+                })
+
+                //Jesse Pinkman
+                $('#j').click(function(){
+                     if(i>=jprice){
+                         i = i-jprice;
+                    var x = setInterval(function(){ i=i+150; $('#ex').html(i); }, 1000);
+                    jc++;
+                    jprice = jprice*2;
+                    $('#jC').html(jc);
+                    $('#jimg').html(jimg);
+                    $('#jprice').html(jprice);
+                     }
+                })
+
+                //Heisenberg
+                $('#h').click(function(){
+                     if(i>=hprice){
+                         i = i-hprice;
+                    var x = setInterval(function(){ i=i+300; $('#ex').html(i); }, 1000);
+                    hc++;
+                    hprice = hprice*2;
+                    $('#hC').html(hc);
+                    $('#himg').html(himg);
+                    $('#hprice').html(hprice);
+                     }
+                })
+           });
+           
+        </script>
+        <script type="text/javascript">
+        	window.onscroll = function(){
+   var top = window.pageYOffset || document.documentElement.scrollTop
+   if( top > 100 ) {
+       var botao = document.getElementById('up');
+       botao.className = "fixed";
+   }else if(top<100){
+   	var botao = document.getElementById('up');
+       botao.className = "original";
+   }
+}
+
+function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15),
+        scrollInterval = setInterval(function(){
+        if ( window.scrollY != 0 ) {
+            window.scrollBy( 0, scrollStep );
+        }
+        else clearInterval(scrollInterval); 
+    },15);
+}
+        </script>
+        
+        <style>
+
+        body{
+        		text-align: center;
+        		background-image: url("back.jpg");
+        		background-repeat: no-repeat;
+        		font-family: impact;
+        	}
+           #meth{
+           	cursor:pointer;
+           }
+
+           .hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.column {
+	margin: 15px 15px 0;
+	padding: 0;
+}
+.column:last-child {
+	padding-bottom: 60px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.fixed {
+  			position: fixed;
+  			bottom: 0;
+  			right: 0;
+  			width: 200px;
+  			
+				}
+		.original {
+			display: none;
+		}
+		#mouse {
+			cursor: pointer;
+		}
+/* Gray Scale*/
+
+	.hover08 figure img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover08 figure:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+            .shadow{
+                background-color: #a3a3a3;
+                border: 2px solid #777;
+                color: #FFF;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+                cursor:pointer;
+                font-family: courier;
+            }
+
+        </style>
+          
+    </head>
+    <body>
+       
+        <hr><br/>
+        <h3>Meth Clicker</h3><br/>
+        <div class="hover01 column">
+        <figure><img src="farm.png" height="150" width="150" id="meth"></figure>
+    </div>
+        <br/>
+        <div>Quantidade de Metanfetamína</div>
+        <div id="ex">0</div><br/>
+        <button id="clicker" class="shadow">Clicker <div id="cprice">30</div></button><button id="upC" class="shadow">Upar <br>(10.000)</button> <div>Quantidade:</div> <div id="clickerC">0</div> 
+        <div id="cursor"></div><br/>
+        <button id="slave" class="shadow">SlaveProducer <div id="sprice">100</div></button> <div>Quantidade:</div> <div id="slaveC">0</div>
+         <div id="slaveimg"></div><br/>
+        <button id="rv" class="shadow">RV <div id="rvprice">1.000</div></button> <div>Quantidade:</div> <div id="rvC">0</div>
+         <div id="rvimg"></div><br/>
+        <button id="d" class="shadow">Dealers <div id="dprice">2.000</div></button> <div>Quantidade:</div> <div id="dC">0</div> 
+        <div id="dimg"></div><br/>
+        <button id="p" class="shadow">Partnership <div id="pprice">10.000</div></button> <div>Quantidade:</div> <div id="pC">0</div> 
+        <div id="pimg"></div><br/>
+        <button id="ml" class="shadow">Meth Lab <div id="mlprice">30.000</div></button> <div>Quantidade:</div> <div id="mlC">0</div> 
+        <div id="mlimg"></div><br/>
+        <button id="gus" class="shadow">Gus Fring <div id="gusprice">50.000</div></button> <div>Quantidade:</div> <div id="gusC">0</div> 
+        <div id="gusimg"></div><br/>
+        <button id="pol" class="shadow">Pollos Hermanos <div id="polprice">100.000</div></button> <div>Quantidade:</div> <div id="polC">0</div> 
+        <div id="polimg"></div><br/>
+        <button id="j" class="shadow">Jesse Pinkman <div id="jprice">1.000.000</div></button> <div>Quantidade:</div> <div id="jC">0</div> 
+        <div id="jimg"></div><br/>
+        <button id="h" class="shadow">Heisenberg <div id="hprice">10.000.000</div></button> <div>Quantidade:</div> <div id="hC">0</div> 
+        <div id="himg"></div><br/>
+        <br/>
+        <div  id="up"><div class="hover01 column"><figure><img src="arrow.png" width="60px" height="60px" onclick="scrollToTop(1000);" id="mouse"/></figure></div></div>
+        <hr>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Relógio</title>
+        <style>           
+            #relogioD{
+              text-align: center;
+            }
+            
+            #relogioA{
+              text-align: center;
+              padding-top: 100px;
+              font-size: 45px;
+            }
+            
+            #pontos{
+                border-radius: 100px;
+                 
+            }
+            
+        </style>
+        <script>
+            function relogioD(){
+                let data = new Date();
+                var horas = data.getHours();
+                var minutos = data.getMinutes();
+                var segundos = data.getSeconds();
+                var anos = data.getFullYear();
+                
+                if(horas < 10){
+                    horas = "0"+horas;
+                }else if(minutos < 10){
+                    minutos = "0"+minutos;
+                }else if(segundos < 10){
+                    segundos = "0"+segundos;
+                }
+                
+                var vSemanas = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+                var vMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];      
+                
+                var dia = vSemanas[data.getDay()];
+                var mes = vMeses[data.getMonth()];
+                
+                document.getElementById('relogioD').innerHTML = dia+", "+mes+" de "+anos+"</br>Hora: "+horas+":"+minutos+":"+segundos;
+                
+                //Aqui ele faz a mágica de mecher o ponteiro
+                var Sangulo = segundos*6;
+                var Sponteiro = document.getElementById("Sponteiro");
+                Sponteiro.setAttribute("transform", "rotate(" + Sangulo + ",210,210)"); //210,210 pq é a posição cx, cy do Círculo
+                if(Sponteiro.rotate == 0,210,210){
+                    var minuto = document.getElementById('minutos');
+                    var anguloM = minutos*6;
+                    minuto.setAttribute("transform", "rotate(" + anguloM + ",210,210)");
+                }
+                if(minuto.rotate == 0,210,210){
+                    var hora = document.getElementById('hora');
+                    var anguloH = horas*30;
+                    hora.setAttribute("transform", "rotate(" + anguloH + ",210,210)");
+                }
+            }
+            setInterval("relogioD()", 1000);
+        </script>
+    </head>
+    <body onload="relogioD();">
+        <div id="relogioD"></div>
+        <div id="relogioA">
+            <svg width="420" height="420">
+                <circle cx="210" cy="210" r="200" stroke="black" stroke-width="10" fill="white"/>
+                    <!--Números-->
+                    <text x="360" y="225">3</text>
+                    <text x="200" y="380">6</text>
+                    <text x="40" y="225">9</text>
+                    <text x="185" y="70">12</text>
+                    <!--Pontos-->
+                    <line x1='210' y1='30' x2='210' y2='15' stroke-width="15" stroke-linecap="round" stroke="black"/>
+                    <line x1='210' y1='390' x2='210' y2='405' stroke-width="15" stroke-linecap="round" stroke="black"/>
+                    <line x1='15' y1='210' x2='30' y2='210' stroke-width="15" stroke-linecap="round" stroke="black"/>
+                    <line x1='405' y1='210' x2='390' y2='210' stroke-width="15" stroke-linecap="round" stroke="black"/>
+                    
+                    
+                    <!--Ponteiros TESTE-->
+                    <line id="Sponteiro" x1='210' y1='210' x2='210' y2='20' stroke-width="8" stroke-linecap="round" stroke="red"/>
+                     <line id="minutos" x1='210' y1='210' x2='210' y2='50' stroke-width="8" stroke-linecap="round" stroke="black"/>
+                     <line id="hora" x1='210' y1='210' x2='210' y2='70' stroke-width="8" stroke-linecap="round" stroke="black"/>
+             </svg>
+        </div>
+    </body>
+</html>

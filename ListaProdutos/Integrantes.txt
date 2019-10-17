@@ -1,0 +1,2 @@
+Integrantes: Aline, Érika, Teilor, Gabriela, Cíntia e Lucas Cardoso.
+Nessa parte, Lucas e Gabriela Cuidaram da classe carrinho e da implementação no HTML.

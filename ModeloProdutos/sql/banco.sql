@@ -1,0 +1,8 @@
+CREATE DATABASE mydb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+CREATE TABLE Produto(
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(60) NOT NULL,
+    serie VARCHAR(20) NULL
+);
+
